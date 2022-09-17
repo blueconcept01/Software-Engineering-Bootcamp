@@ -83,7 +83,7 @@ INSERT INTO orders (OrderID, CustomerID, EmployeeID, OrderDate, ShipperID) VALUE
 (10258, 20, 1, '1996-07-17', 1),
 (10259, 13, 4, '1996-07-18', 3),
 (10260, 55, 4, '1996-07-19', 1),
-(10261, 61, 4, '1996-07-19', 2));
+(10261, 61, 4, '1996-07-19', 2);
 
 --
 -- Table structure for table `shippers`
