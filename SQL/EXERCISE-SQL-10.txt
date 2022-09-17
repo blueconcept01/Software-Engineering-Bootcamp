@@ -1,0 +1,42 @@
+Exercise 10
+
+Log into the postgres "sudo -u postgres psql", you should be able to access the table 'customers', 'orders' and 'shippers'.
+
+Perform the following Questions -
+
+1. Write a SQL statement that selects all orders with customer information.
+2. Write a SQL statement that selects all orders with customer and shipper information.
+3. Write a SQL statement that select all customers, and any orders they might have
+4. Write a SQL statement that selects all customers, and all orders
+5. Write a SQL statement that matches customers that are from the same city
+6. Write a SQL statement that creates an alias named "Address" that combine four columns (Address, PostalCode, City and Country)
+
+Answers:
+
+1. SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+2. SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+
+3. SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+4. SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+5. SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+
+6. SELECT CustomerName, (Address || ', ' || PostalCode || ' ' || City || ', ' || Country) AS Address
+FROM Customers;
