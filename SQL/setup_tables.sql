@@ -1,5 +1,5 @@
 -- create a database, named sqlfundamentals
-CREATE DATABASE IF NOT EXISTS sqlfundamentals;
+CREATE DATABASE sqlfundamentals;
 
 
 -- connect to the newly created database
