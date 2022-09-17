@@ -1,0 +1,35 @@
+Exercise 1
+
+Log into the postgres "sudo -u postgres psql", you should be able to access the table 'customers'.
+
+Perform the following Questions -
+
+•	Question 1 - Write a SQL statement that selects the "CustomerName", "City", and "Country" columns from the "Customers" table?
+•	Question 2 - Write a SQL statement that selects ALL the columns from the "Customers" table?
+•	Question 3 - Write a SQL statement that selects all values from the "Country" column in the "Customers" table?
+•	Question 4 - Write a SQL statement that selects only the DISTINCT values from the "Country" column in the "Customers" table?
+•	Question 5 - Write a SQL statement that counts and returns the number of different (distinct) countries in the "Customers" table?
+•	Question 6 - Write a SQL statement that selects all the customers from "Mexico"?
+•	Question 7 - Write a SQL statement that select the customers with id 1?
+•	Question 8 - Write a SQL statement that selects all fields from "Customers" where country is "Germany" AND city is "Berlin"?
+•	Question 9 - Write a SQL statement that selects all fields from "Customers" where city is "Berlin" OR "Stuttgart"?
+•	Question 10 - Write a SQL statement that selects all fields from "Customers" where country is "Germany" OR "Spain"?
+•	Question 11 - Write a SQL statement that selects all fields from "Customers" where country is NOT "Germany"?
+•	Question 12 - Write a SQL statement that selects all fields from "Customers" where country is "Germany" AND city must be "Berlin" OR "Stuttgart"?
+•	Question 13 - Write a SQL statement that selects all fields from "Customers" where country is NOT "Germany" and NOT "USA"?
+
+Answers:
+
+1. SELECT CustomerName, City, Country FROM Customers;
+2. SELECT * FROM Customers;
+3. SELECT Country FROM Customers;
+4. SELECT DISTINCT Country FROM Customers;
+5. SELECT COUNT(DISTINCT Country) FROM Customers;
+6. SELECT * FROM Customers WHERE Country = 'Mexico';
+7. SELECT * FROM Customers WHERE CustomerID = 1;
+8. SELECT * FROM Customers WHERE Country = 'Germany' AND City = 'Berlin';
+9. SELECT * FROM Customers WHERE City = 'Berlin' OR City = 'Stuttgart';
+10. SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain';
+11.  SELECT * FROM Customers WHERE NOT Country = 'Germany';
+12. SELECT * FROM Customers WHERE Country = 'Germany' AND (City = 'Berlin' OR City = 'Stuttgart');
+13. SELECT * FROM Customers WHERE NOT Country = 'Germany' AND NOT Country = 'USA';
