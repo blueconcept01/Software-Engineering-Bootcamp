@@ -1,0 +1,68 @@
+Exercise 8
+
+Log into the postgres "sudo -u postgres psql", you should be able to access the table 'employees' and 'department'.
+
+1. Write a SQL statement to make a join with two tables employees and departments to display department name, first_name and last_name, hire date and salary for all the managers who achieved a working experience is more than 15 years.
+2. Write a SQL statement to make a join with two tables employees and departments to display the department ID, department name and the first name of the manager.
+3. Write a SQL statement to make a join with two tables employees and departments to get the department name and number of employees working in each department.
+4. Write a SQL statement to make a join with a table employees and itself to find the name, including first_name and last_name and hire date for those employees who were hired after the employee Faviet.
+5. Write a SQL statement to make a join with two tables employees and itself to find the employee id, last_name as Employee along with their manager_id and last name as Manager.
+6. Write a SQL statement to make a join with employees and departments table to find the name of the employee, including first_name and last name, department ID and name of departments.
+
+Answers:
+
+1. SELECT department_name, first_name, last_name,
+hire_date, salary,date_part('year',age(now(),hire_date)) Experience 
+FROM departments w1 
+JOIN employees w2 
+ON (w1.manager_id = w2.employee_id)
+WHERE date_part('year',age(now(),hire_date))>15;
+
+2. SELECT w1.department_id, w1.department_name, w2.manager_id, w2.first_name 
+FROM departments w1 
+INNER JOIN employees w2 
+ON (w1.manager_id = w2.employee_id);
+
+3. SELECT department_name AS "Department Name", 
+COUNT(*) AS "No of Employees" 
+FROM departments 
+INNER JOIN employees 
+ON employees.department_id = departments.department_id 
+GROUP BY departments.department_id, department_name 
+ORDER BY department_name;
+
+4. SELECT e.first_name, e.last_name, e.hire_date
+FROM employees e
+JOIN employees davies
+ON (davies.last_name = 'Faviet')
+WHERE davies.hire_date < e.hire_date;
+
+5. SELECT W1.employee_id as "Emp_id" , W1.last_name AS "Employee",
+W2.employee_id AS "Manager ID", W2.last_name AS "Manager"
+FROM employees W1 JOIN employees W2
+ON W1.manager_id= W2.employee_id;
+
+6. SELECT first_name, last_name, department_id, department_name 
+FROM employees 
+JOIN departments USING (department_id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

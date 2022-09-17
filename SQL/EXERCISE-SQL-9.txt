@@ -1,0 +1,156 @@
+Exercise 9
+
+Log into the postgres "sudo -u postgres psql", you should be able to access the table 'employees' and 'department'.
+
+1. Write a SQL subquery to find the first_name, last_name and salaries of the employees who have a higher salary than the employee whose last_name is Bull.
+2. Write a SQL subquery to find the first_name and last_name of all employees who works in the IT department.
+3. Write a SQL subquery to find the first_name and last_name of the employees who are working as a manager.
+4. Write a SQL subquery to find the first_name, last_name and salary, which is greater than the average salary of the employees.
+5. Write a SQL Subquery to find the first_name, last_name and salary of the employees who earn more than the minimum salary and works in any of the IT departments.
+6. Write a SQL subquery to find the first_name, last_name and salary of the employees who draw a more salary than the employee, which the last name is Ernst.
+7. Write a SQL subquery to find all the information of the employees who draws the same salary as the minimum salary for all departments.
+8. Write a SQL subquery to find all the information of the employees whose salary greater than the average salary of all departments.
+9. Write a SQL subquery to find the first_name and last_name of the employees who are not supervisors.
+10. Write a SQL subquery to find the employee ID, first name, last name and department names of all employees.
+11. Write a SQL subquery to find the employee ID, first name, last name and salary of all employees whose salary is above the average salary for their departments.
+12. Write a subquery to find the 5th maximum salary of all salaries.
+13. Write a subquery to find the 4th minimum salary of all the salaries.
+14. Write a subquery to display the information for all the departments where no employee is working.
+15. Write a query to get three maximum salaries.
+
+
+
+Answers:
+
+1. SELECT first_name, last_name, salary
+FROM employees
+WHERE salary >
+(SELECT salary
+FROM employees
+WHERE last_name = 'Chen');
+
+2. SELECT first_name, last_name 
+FROM employees 
+WHERE department_id 
+IN (SELECT department_id 
+FROM departments 
+WHERE department_name='IT');
+
+3. SELECT first_name, last_name 
+FROM employees 
+WHERE (employee_id 
+IN (SELECT manager_id 
+FROM employees));
+
+4. SELECT first_name, last_name, salary 
+FROM employees 
+WHERE salary > (
+SELECT AVG(salary) 
+FROM employees);
+
+5. SELECT first_name, last_name, salary
+FROM employees
+WHERE department_id IN
+(SELECT department_id
+FROM departments
+WHERE department_name LIKE 'IT%')
+AND salary > (
+SELECT min(salary)
+FROM employees);
+
+6. SELECT first_name, last_name, salary
+FROM employees
+WHERE salary >
+(SELECT salary
+FROM employees
+WHERE last_name = 'Ernst')
+ORDER BY first_name;
+
+7. SELECT * 
+FROM employees 
+WHERE salary = (
+SELECT MIN(salary) 
+FROM employees);
+
+8. SELECT * 
+FROM employees 
+WHERE salary > 
+ALL(SELECT avg(salary) 
+FROM employees 
+GROUP BY department_id);
+
+9. SELECT b.first_name,b.last_name 
+FROM employees b 
+WHERE NOT EXISTS (
+SELECT 'X' 
+FROM employees a 
+WHERE a.manager_id = b.employee_id);
+
+10. SELECT employee_id, first_name, last_name, 
+(SELECT department_name 
+FROM departments d 
+WHERE e.department_id = d.department_id) 
+department FROM employees e 
+ORDER BY department;
+
+11. SELECT employee_id, first_name 
+FROM employees AS A 
+WHERE salary > 
+( SELECT AVG(salary) 
+FROM employees 
+WHERE department_id = A.department_id);
+
+12. SELECT DISTINCT salary 
+FROM employees e1 
+WHERE 5 = (SELECT COUNT(DISTINCT salary) 
+FROM employees  e2 
+WHERE e1.salary <= e2.salary); 
+
+13. SELECT DISTINCT salary 
+FROM employees e1 
+WHERE 4 = (SELECT COUNT(DISTINCT salary) 
+FROM employees  e2 
+WHERE e1.salary >= e2.salary);
+
+14. SELECT * FROM departments 
+WHERE department_id 
+NOT IN (select department_id 
+FROM employees);
+
+15. SELECT DISTINCT salary 
+FROM employees a 
+WHERE  3 >= (SELECT COUNT(DISTINCT salary) 
+FROM employees b 
+WHERE a.salary <= b.salary) 
+ORDER BY a.salary DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

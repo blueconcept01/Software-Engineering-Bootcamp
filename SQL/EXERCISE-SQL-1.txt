@@ -1,0 +1,29 @@
+Exercise 1
+
+Log into the postgres "sudo -u postgres psql"-
+
+1. Write a SQL statement to create a database 'testdatabase'
+2. How to connect to the database 'testdatabase'
+3. Write a SQL statement to create a table countries including columns country_id,country_name and region_id?
+4. Write a SQL statement to see the structure of the table countries?
+5. Write a SQL statement to create the structure of a table dup_countries similar to countries?
+6. Write a SQL statement to see the structure of the table dup_countries? 
+7. Write a SQL statement to create a duplicate copy of countries table including structure and data by name dup_countries?
+8. Write a SQL statement to create a table countries including columns country_id,country_name and region_id and set a constraint NULL?
+9. Write a SQL statement to create a table named 'jobs' including columns job_id, job_title, min_salary, max_salary and check whether the max_salary amount exceeding the upper limit 25000?
+10. Write a SQL statement to create a table named countries including columns country_id, country_name and region_id and make sure that no countries except Italy, India and China will be entered in the table?
+11. Write a SQL statement to create a table named countries including columns country_id,country_name and region_id and make sure that no duplicate data against column country_id will be allowed at the time of insertion.
+
+Answers:
+
+1. CREATE DATABASE testdatabase;
+2. \c testdatabase;
+3. CREATE TABLE countries (COUNTRY_ID varchar(3),COUNTRY_NAME varchar(45) ,REGION_ID decimal(10,0));
+4. \d countries;
+5. CREATE TABLE dup_countries AS (SELECT * FROM countries) WITH NO DATA;
+6. \d dup_countries;
+7. CREATE TABLE dup_countries AS SELECT * FROM  countries;
+8. CREATE TABLE IF NOT EXISTS countries ( COUNTRY_ID varchar(2) NOT NULL,COUNTRY_NAME varchar(40) NOT NULL,REGION_ID decimal(10,0) NOT NULL);
+9. CREATE TABLE IF NOT EXISTS jobs ( JOB_ID varchar(10) NOT NULL , JOB_TITLE varchar(35) NOT NULL, MIN_SALARY decimal(6,0), MAX_SALARY decimal(6,0) CHECK(MAX_SALARY<=25000));
+10. CREATE TABLE IF NOT EXISTS countries ( COUNTRY_ID varchar(2), COUNTRY_NAME varchar(40) CHECK(COUNTRY_NAME IN('Italy','India','China')) ,REGION_ID decimal(10,0));
+11. CREATE TABLE IF NOT EXISTS countries ( COUNTRY_ID varchar(2) NOT NULL, COUNTRY_NAME varchar(40) NOT NULL, REGION_ID decimal(10,0) NOT NULL, UNIQUE(COUNTRY_ID));
