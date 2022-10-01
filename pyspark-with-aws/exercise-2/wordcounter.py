@@ -1,3 +1,4 @@
+## this python file is to get the word counter program
 from pyspark import SparkContext
 from datetime import datetime
 import sys
