@@ -1,0 +1,12 @@
+This folder contains the python exercises for S3.
+
+Please refer the document 'doc_to_setup_programmatic_access_boto.docx' to get the AWS credentials from AWS.
+
+There are the files attached in this folder -
+
+1. s3-create-bucket.py - this python file shows you how to create s3 bucket in AWS using python boto3.
+2. s3-upload-file.py   - this python file shows you how to upload objects to s3 bucket in AWS using python boto3.
+3. s3-list-all-objects.py - this python file shows you how to list all files from s3 bucket in AWS using python boto3.
+4. s3-delete-file.py - this python file shows you how to delete an object/file/folder from s3 bucket in AWS using python boto3.
+5. s3-list-buckets.py - this python file shows you how to list all the s3 buckets available in AWS using python boto3.
+6. s3-delete-bucket.py - this python file shows you how to destroy a s3 bucket in AWS using python boto3.
