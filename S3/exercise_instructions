@@ -1,8 +1,11 @@
-This folder contains the python exercises for S3.
+In this S3 exercise, we will access the AWS s3 service using python and boto3.
 
-Please refer the document 'doc_to_setup_programmatic_access_boto.docx' to get the AWS credentials from AWS.
+boto3 - Boto3 is the name of the Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts.
 
-There are the files attached in this folder -
+Please refer the document 'doc_to_setup_programmatic_access_boto.docx' to setup boto3 and access credentials in python. After this document, you should have the
+access key and secret key that we will be using to setup the connection between python and AWS s3 service.
+
+We can use use boto3 to access AWS services.We will be implementing the following python files that will interact with S3 services in AWS -
 
 1. s3-create-bucket.py - this python file shows you how to create s3 bucket in AWS using python boto3.
 2. s3-upload-file.py   - this python file shows you how to upload objects to s3 bucket in AWS using python boto3.
@@ -10,3 +13,5 @@ There are the files attached in this folder -
 4. s3-delete-file.py - this python file shows you how to delete an object/file/folder from s3 bucket in AWS using python boto3.
 5. s3-list-buckets.py - this python file shows you how to list all the s3 buckets available in AWS using python boto3.
 6. s3-delete-bucket.py - this python file shows you how to destroy a s3 bucket in AWS using python boto3.
+
+I have added comments in the python files.
