@@ -8,7 +8,7 @@ session = boto3.Session(aws_access_key_id='<access-key>', aws_secret_access_key=
 #Creating S3 Resource From the Session.
 s3 = session.resource('s3')
 
-## put file to s3
+## put file to s3; filename.txt
 result = s3.meta.client.put_object(Body='Text Contents', Bucket='<bucket-name>', Key='filename.txt')  ##key is the file-name
 res = result.get('ResponseMetadata')
 
