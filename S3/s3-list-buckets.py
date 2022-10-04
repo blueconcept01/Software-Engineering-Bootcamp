@@ -4,6 +4,7 @@ import boto3
 ## add credentials to this line
 session = boto3.Session(aws_access_key_id='<access-key>', aws_secret_access_key='<secret-key>')
 
+## connect to the S3 resource
 s3 = session.resource('s3')
 
 ## print all buckets in the aws account
