@@ -6,6 +6,7 @@ session = boto3.Session(aws_access_key_id='<access-key>', aws_secret_access_key=
 ## create session with redshift
 client = session.client('redshift')
 
+## delete the cluster
 response = client.delete_cluster(
     ClusterIdentifier=<cluster-name>,
     SkipFinalClusterSnapshot=True
