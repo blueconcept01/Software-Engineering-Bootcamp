@@ -4,8 +4,10 @@ import boto3
 ## add credentials to this line
 session = boto3.Session(aws_access_key_id='<access-key>', aws_secret_access_key='<secret-key>')
 
+## setup connection with S3 
 s3 = session.resource('s3')
 
+## connect to the particular bucket
 my_bucket = s3.Bucket('<bucket-name>')
 
 ## delete the file
