@@ -5,6 +5,8 @@ session = boto3.Session(aws_access_key_id='<access-key>', aws_secret_access_key=
 
 ## create session with redshift
 obj = session.client('redshift')
+
+## create the cluster
 obj.create_cluster(
     ClusterIdentifier=<cluster-name>,
     NodeType='dc2.large',
