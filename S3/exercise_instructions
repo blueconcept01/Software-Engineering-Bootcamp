@@ -8,10 +8,46 @@ access key and secret key that we will be using to setup the connection between 
 We can use use boto3 to access AWS services.We will be implementing the following python files that will interact with S3 services in AWS -
 
 1. s3-create-bucket.py - this python file shows you how to create s3 bucket in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the S3 resource.
+- create the bucket using method "create_bucket" with the given bucket name in the given region.
+
 2. s3-upload-file.py   - this python file shows you how to upload objects to s3 bucket in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the S3 resource.
+- Create connection with the particular bucket in which you want to upload the file.
+- Call the boto3 method "put_object" to upload the given file "filename.txt" to the S3 bucket.
+- Check whether the upload is successful or not. You can do it in two ways - check the AWS console or via python as well.
+- We will get the response of the method "put_object" and check the success code after the request.
+
 3. s3-list-all-objects.py - this python file shows you how to list all files from s3 bucket in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the S3 resource.
+- Create connection with the particular bucket of which you want to see the object details.
+- Call the "objects.all" method on the bucket and it will show you the list of all files and folders inside the bucket.
+
 4. s3-delete-file.py - this python file shows you how to delete an object/file/folder from s3 bucket in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the S3 resource.
+- Create connection with the particular bucket in which you want to perform the delete operation.
+- Call the "delet_objects" method on the bucket with the filename that you want to delete.
+
 5. s3-list-buckets.py - this python file shows you how to list all the s3 buckets available in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the S3 resource.
+- Call the "buckets.all" method on the s3 resouce and it will show you the all the buckets in the given region.
+
 6. s3-delete-bucket.py - this python file shows you how to destroy a s3 bucket in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the S3 resource.
+- Create connection with the particular bucket in which you want to perform the delete operation.
+- You cannot delete the buckt if its not empty. First step is to empty the bucket, we will call "objects.delete().all" method on the bucket.
+- Now call "delete" method on the bucket to delete the particular bucket.
 
 I have added comments in the python files.
