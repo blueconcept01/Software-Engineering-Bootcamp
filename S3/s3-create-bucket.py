@@ -3,11 +3,11 @@
 import boto3
 
 #Creating Session With Boto3.
-## add credentials to this line
+## add credentials to this line; these are the same credentials that we created before
 session = boto3.Session(aws_access_key_id='<access-key>', aws_secret_access_key='<secret-key>')
 
 
-#Creating S3 Resource From the Session.
+#Creating S3 Resource From the Session; this will help to select the S3 resources from the huge list of services in AWS
 s3 = session.resource('s3')
 
 ## create simple bucket with the bucket name and the region you want to launch in -
