@@ -1,0 +1,35 @@
+In this Redshift exercise, we will access the AWS redshift service using python and boto3.
+
+boto3 - Boto3 is the name of the Python SDK for AWS. It allows you to directly create, update, and delete AWS resources from your Python scripts.
+
+Please refer the document 'doc_to_setup_programmatic_access_boto.docx' to setup boto3 and access credentials in python. After this document, you should have the
+access key and secret key that we will be using to setup the connection between python and AWS redshift service.
+
+We can use use boto3 to access AWS services.We will be implementing the following python files that will interact with redshift services in AWS -
+
+1. redshift-create-cluster.py - this python file shows you how to create redshift cluster in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the redshift client
+- Call the method "create_cluster" with the details - cluster name, node type, username, password, database name, and the port.
+2. redshift-connect-to-cluster.py   - this python file shows you how to connect to redshift cluster in AWS using python boto3.
+This file will do the following:
+- Import psycopg2, this module is used to connect to redshift cluster, to query the database.
+- Create connection with redshift service and get the details.
+- Now, call the connect method on psycopg2, to setup the connection with the redshift database.
+- The database is connected, you can call the command to perform the operations on the database.
+
+3. redshift-list-cluster.py - this python file shows you how to list all the redshift clusters available in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the redshift client
+- Call the "describe_clusters" method and get the name and related details for the clusters available.
+
+4. redshift-delete-cluster.py - this python file shows you how to delete the redshift cluster in AWS using python boto3.
+This file will do the following:
+- setup the session with the AWS credentials.
+- connect to the redshift client
+- Call the "delete_cluster" method to delete the particular cluster.
+
+I have added comments in the python files.
+
