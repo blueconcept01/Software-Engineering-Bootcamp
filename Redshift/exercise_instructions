@@ -12,6 +12,7 @@ This file will do the following:
 - setup the session with the AWS credentials.
 - connect to the redshift client
 - Call the method "create_cluster" with the details - cluster name, node type, username, password, database name, and the port.
+
 2. redshift-connect-to-cluster.py   - this python file shows you how to connect to redshift cluster in AWS using python boto3.
 This file will do the following:
 - Import psycopg2, this module is used to connect to redshift cluster, to query the database.
