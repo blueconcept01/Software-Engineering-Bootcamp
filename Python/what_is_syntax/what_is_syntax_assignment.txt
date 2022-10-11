@@ -1,0 +1,30 @@
+Assignment 1
+
+Run hello_world.py at least once.
+To do this either press the play button on Visual Studio Code (VSC) or type:
+
+python3 hello_worlds.py
+
+You should see:
+
+helloworld!
+this is command 2
+this is command 3
+My name is
+Jack Tran
+
+Assignment 2
+
+Your name isn't Jack Tran so lets change Jack Tran to your own name.  
+Edit the file so Jack Tran is replaced by your name.  
+Then save and run the code the same way as in Assignment 1.
+
+helloworld!
+this is command 2
+this is command 3
+My name is
+[Your Name Here]
+
+Note:
+
+To Run Python code, setup VSC, please refer back to the last lesson and the introduction to command line
