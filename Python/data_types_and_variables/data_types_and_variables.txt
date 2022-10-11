@@ -1,0 +1,30 @@
+For this assignment please change the 4 x_var variables to their respective data type.  Any value is fine.  
+Keep in mind that integers do not have a . while floats do.
+
+To test your code run your code on VSC or python3 data_types_and_variables.py
+
+Without any changes your code should have an error message like this:
+
+F
+======================================================================
+FAIL: test_var (__main__.TestDataTypesAndVariables)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/thang/Data-Engineering-Bootcamp/Python/data_types_and_variables/data_types_and_variables.py", line 19, in test_var
+    self.assertNotEqual(int_var, None, msg="int_var is still None you have not set int_var yet")
+AssertionError: None == None : int_var is still None you have not set int_var yet
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+
+Read the assertion error message as that will clue you into what the issue is and where the issue is.  As you make changes the errors will change.
+When complete the file should print out that all tests pass:
+
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+

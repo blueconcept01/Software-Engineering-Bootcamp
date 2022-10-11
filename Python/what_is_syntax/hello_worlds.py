@@ -7,4 +7,4 @@ print("this is command 2")
 print("this is command 3")
 print("My name is")
 
-print("Jack Tran") # Replace with your name
+print("Thang Tran") # Replace with your name
