@@ -1,0 +1,4 @@
+For this lesson's assignment edit the operators.py using the comment's directions.
+Think of this assignment as a sandbox which allows you to explore writing simple code using 
+what you just learned in the lesson.
+

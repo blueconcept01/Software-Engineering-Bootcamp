@@ -1,0 +1,3 @@
+Please implement the functions for functions.py. add_to_list will need to be defined as a function.  
+Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
+ask for help or review prior lessons.
