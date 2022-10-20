@@ -41,7 +41,7 @@ For example: if string is "hello", then answer should be ['h', 'e', 'l', 'o']
 
 Make use of continue statement.
 """
-def individual_unique_characters(string: int) -> Tuple[int, List[str]]:
+def individual_unique_characters(string: str) -> Tuple[int, List[str]]:
 
     pass   
 
