@@ -133,7 +133,7 @@ You are given two list of coordinates
 x-coordinates x1, x2, x3,....
 y-coordinates y1, y2, y3, .....
 
-Return a list of (x, y) coordinates i.e [(x1, y1), (x1, y2), (x1, y3),(x2, y1), (x2, y2), .....]
+Return a list of (x, y) coordinates i.e all possible coordinates in the plane [(x1, y1), (x1, y2), (x1, y3),(x2, y1), (x2, y2), .....]
 
 If any lists of coordinates are empty, return -1
 
