@@ -33,9 +33,9 @@ def even_numbers(n: int) -> List[int]:
 """
 n is a positive integer
 
-Return a list of integers from 1 to n(including n) that are even.
+Return a list of integers from 1 to n(including n) that are odd.
 """
-def odd_numbers(n):
+def odd_numbers(n: int) -> List[int]:
     res = []
 
     for i in range(1, n+1):
@@ -298,8 +298,8 @@ class TestDataTypesAndVariables(unittest.TestCase):
         self.assertEqual(max_list([]), -1, msg="Returning -1 as given list is empty")
 
         # min_list function
-        self.assertEqual(min_list([1, 2, 3, 4]),1, msg="Returning the sum of all the numbers in the list")
-        self.assertEqual(min_list([2, 2, 2]),2, msg="Returning the sum of all the numbers in the list")
+        self.assertEqual(min_list([1, 2, 3, 4]),1, msg="Returning the minimum of all the numbers in the list")
+        self.assertEqual(min_list([2, 2, 2]),2, msg="Returning the minimum of all the numbers in the list")
         self.assertEqual(min_list([]), -1, msg="Returning -1 as given list is empty")        
 
         # find_num_in_list function
