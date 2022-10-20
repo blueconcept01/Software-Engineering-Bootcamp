@@ -1,6 +1,6 @@
 Please implement the functions for for_loops.py.
 
-There are he list of functions that you will be implementing in the python file.
+Below are the functions that you will be implementing in the python file.
 
 1. list_numbers
 
