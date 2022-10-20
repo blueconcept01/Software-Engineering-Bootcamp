@@ -5,8 +5,7 @@ n is an int
 check if n is negative, return -1
 Else, Return the numbers from 0 till n(including n)
 """
-def list_numbers(n: int) -> List[int]:
-    
+def list_numbers(n: int) -> List[int]:    
     if n < 0:
         return -1
 
@@ -50,7 +49,6 @@ Implement a function that will take a string and return the list with its indivi
 For example: if string is "hello", then answer should be ['h', 'e', 'l', 'l', 'o']
 """
 def individual_characters(string: str) -> Tuple[int, List[str]]:
-
     if string == '':
         return -1
 
@@ -68,7 +66,6 @@ For example: if string is "hello", then answer should be ['h', 'e', 'l', 'o']
 Make use of continue statement.
 """
 def individual_unique_characters(string: str) -> Tuple[int, List[str]]:
-
     if string == '':
         return -1
 
@@ -85,7 +82,6 @@ Implement a function that will take a list of numbers(integers) and return the s
 
 """
 def sum_list(num_list: List[int]) -> int:
-
     if len(num_list) == 0:
         return -1
 
@@ -101,7 +97,6 @@ If the list is empty, then return -1.
 
 """
 def max_list(num_list: List[int]) -> int:
-
     if len(num_list) == 0:
         return -1
 
@@ -118,7 +113,6 @@ If the list is empty, then return -1.
 
 """
 def min_list(num_list: List[int]) -> int:
-
     if len(num_list) == 0:
         return -1
 
@@ -138,7 +132,6 @@ If the list is empty, then return -1.
 Make use of break statement
 """
 def find_num_in_list(num_list: List[int], num: int) -> Tuple[str, int]:
-
     if len(num_list) == 0:
         return -1
 
@@ -161,7 +154,6 @@ If there are no positive numbers in the list, return -1
 Make use of continue statement.
 """
 def get_positives(num_list: List[int]) -> int:
-
     if len(num_list) == 0:
         return -1
 
@@ -183,7 +175,6 @@ If there are no negative numbers in the list, return -1
 Make use of continue statement.
 """
 def get_negative(num_list: List[int]) -> int:
-
     if len(num_list) == 0:
         return -1
 
@@ -204,7 +195,6 @@ For example: if dictionary is {'a':1, 'b': 2}, then it should return ['a', 'b']
 If the dictionary is empty, then return -1.
 """
 def get_keys(dictionary: Dict) -> List:
-
     if len(dictionary) == 0:
         return -1
 
@@ -221,7 +211,6 @@ For example: if dictionary is {'a':1, 'b': 2}, then it should return [1, 2]
 If the dictionary is empty, then return -1.
 """
 def get_values(dictionary: Dict) -> List:
-
     if len(dictionary) == 0:
         return -1
 
@@ -245,7 +234,6 @@ If any lists of coordinates are empty, return -1
 
 """
 def get_coordinates(x_coordinates: List[int], y_coordinates: List[int]) -> List[Tuple[int, int]]:
-
     if len(x_coordinates) == 0 or len(y_coordinates) == 0:
         return -1
 
