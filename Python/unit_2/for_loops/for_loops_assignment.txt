@@ -1,0 +1,62 @@
+Please implement the functions for for_loops.py.
+
+There are he list of functions that you will be implementing in the python file.
+
+1. list_numbers
+
+This function takes an integers and returns a list from 0 till the guven integer.(including both 0 and the integer)
+
+2. even_numbers
+
+This function takes a positive integers and returns a list of all the even numbers from 1 to the integer.(including both 1 and the integer)
+
+3. odd_numbers
+
+This function takes a positive integers and returns a list of all the odd numbers from 1 to the integer.(including both 1 and the integer)
+
+4. individual_characters
+
+This function will take a string and returns a list of all character from the string.
+
+5. individual_unique_characters
+
+This function will take a string and returns a list of unique character from the string. Make use of continue statement.
+
+6. sum_list
+
+This function takes a list of integers and returns sum of the list of integers.
+
+7. max_list
+
+This function takes a list of integers and returns maximum of the list of integers.
+
+8. min_list
+
+This function takes a list of integers and returns minimum of the list of integers.
+
+9. find_num_in_list
+
+This function takes a list of integers and a number. Your taks is to check whether the number exists in the list or not. Make use of break statement
+
+10. get_positives
+
+This function takes a list of integers and returns a list of all positive integers from the list. Make use of continue statement.
+
+11. get_negative
+
+This function takes a list of integers and returns a list of all negative integers from the list. Make use of continue statement.
+
+12. get_keys
+
+This function takes a dictionary and returns a list of all keys from the dictionary.
+
+13. get_values
+
+This function takes a dictionary and returns a list of all key values from the dictionary.
+
+14. get_coordinates
+
+This function takes two lists x_coordinates and y_coordinates. And returns a list of all possible coordinates in the plane.
+
+Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
+ask for help or review prior lessons.
