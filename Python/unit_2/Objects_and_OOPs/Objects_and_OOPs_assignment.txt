@@ -1,0 +1,50 @@
+Please implement the functions for Objects_and_OOPs.py.
+
+Below are the functions that you will be implementing in the python file using OOPs.
+
+1. create_dog_class
+
+The function will do the following -
+1. Create a class `Dog` with the attributes breed, color, age, and name. 
+2. Create the object of the `Dog` class with the input list.
+3. Return the attribute breed of the object.
+
+2. create_vehicle_class
+
+The function will do the following -
+1. Create a Vehicle class with max_speed and mileage instance attributes. 
+2. Create the object of the `Vehicle` class with the input 
+3. Return the attribute mileage of the object.
+
+3. get_fare_vehicle
+
+The function will do the following -
+1. Create class vehicle with the attributes name, mileage and capacity.
+2. Create method `fare` in class vehicle that calulates the fare as 'capacity*100'
+3. Create object of class Vehicle with the input list.
+4. Return the fare for the given capacity.
+
+4. create_bus_inherit_class
+
+This is based on Class Inheritence.
+
+The function will do the following -
+1. Create class Vehicle with the attributes name, max_speed and mileage.
+2. Create class Bus that will inherit class vehicle.
+3. Create object of class Bus with the input list and return the name attribute of the Bus object.
+
+5. get_bus_fare
+
+This is based on Class Inheritence.
+
+The function will do the following -
+1. Create class Vehicle with the attributes name, mileage and capacity.
+2. Create method `fare` in class Vehicle that calulates the fare as 'capacity*100'
+3. Create class Bus that will inherit class Vehicle.
+4. Create method `fare` in class Vehicle that will inherit the super class method and add the 10% maintainence charges. So total 
+fare for bus instance will become the final amount = total fare + 10% of the total fare.
+5. Create object of class Bus with the input list.
+6. Return the fare for the given capacity.
+
+Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
+ask for help or review prior lessons.
