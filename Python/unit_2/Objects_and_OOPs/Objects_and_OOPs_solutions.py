@@ -11,7 +11,7 @@ You will be doing the following -
 Example: if the input is - [“Husky”, "Gray", 5, "Fido"], then output should be "Husky".
 
 """
-def create_dog_class(list1: List) -> List[int]:    
+def create_dog_class(list1: List):    
 
   # create class
   class Dog:
@@ -37,7 +37,7 @@ You will be doing the following -
 
 Example: if the input is - [240, 18], then output should be 18.
 """
-def create_vehicle_class(list1: List) -> List[int]:    
+def create_vehicle_class(list1: List):    
   # create class
   class Vehicle:
       def __init__(self, max_speed, mileage):
@@ -61,7 +61,7 @@ You will be doing the following -
 4. Return the fare for the given capacity.
 
 """
-def get_fare_vehicle(list1: List) -> List[int]:    
+def get_fare_vehicle(list1: List):    
 
   # create class
   class Vehicle:
@@ -92,7 +92,7 @@ You will be doing the following -
 3. Create object of class Bus with the input list and return the name attribute of the Bus object.
 
 """
-def create_bus_inherit_class(list1: List) -> List[int]:    
+def create_bus_inherit_class(list1: List):    
 
   # create class vehicle
   class Vehicle:
@@ -127,7 +127,7 @@ fare for bus instance will become the final amount = total fare + 10% of the tot
 4. Return the fare for the given capacity.
 
 """
-def get_bus_fare(list1: List) -> List[int]:    
+def get_bus_fare(list1: List):    
 
   # create class Vehicle
   class Vehicle:
