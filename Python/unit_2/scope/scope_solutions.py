@@ -1,4 +1,3 @@
-import json
 """
 User will input 2 integers; p1 and p2.
 
