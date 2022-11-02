@@ -1,0 +1,19 @@
+Please implement the functions for scope.py.
+
+Below is the function that you will be implementing in the python file.
+
+1. variable_scope
+
+Concept: Variable Scope. If there are two variable with same name, then its scope is defined by the block. 
+If its inside a function, then its scope is within the function. 
+
+You will perform the following:
+1. Define a variable `a` with value p1.
+2. Create a function name `check` and inside the function define a varibale `a` with value p2. 
+And add a return statement to return the variable `a`.
+3. return the variable `a`, and function `check`.
+
+You will notice that function `check` will return the value of `a` as p2, not as p1.
+
+Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
+ask for help or review prior lessons.
