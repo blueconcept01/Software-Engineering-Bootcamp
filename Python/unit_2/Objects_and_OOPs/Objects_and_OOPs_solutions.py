@@ -31,7 +31,7 @@ def create_dog_class(list1: List):
 Input is a list of values.
 
 You will be doing the following -
-1. Create a Vehicle class with max_speed and mileage instance attributes. 
+1. Create a `Vehicle` class with max_speed and mileage instance attributes. 
 2. Create the object of the `Vehicle` class with the input 
 3. Return the attribute mileage of the object.
 
@@ -51,106 +51,127 @@ def create_vehicle_class(list1: List):
   return Vehicle1.mileage
 
 """
-Input will be a list.
+Input is a string.
 
 You will be doing the following -
+1. Create a `Word` class with attribute word. 
+2. Create a method `reverse_words` inside the class that will return the reversed word.
+3. Create the object of the `Word` class with the input string.
+4. Call the function `reverse_words` on the object.
+5. return the reversed string
 
-1. Create class vehicle with the attributes name, mileage and capacity.
-2. Create method `fare` in class vehicle that calulates the fare as 'capacity*100'
-3. Create object of class Vehicle with the input list.
-4. Return the fare for the given capacity.
+If the given string is empty, return -1.
+
+Example: if the input is - 'hello', then output should be 'olleh'.
+"""
+def create_class_word(string):   
+
+    if len(string) == 0:
+        return -1
+
+    class Word:
+        def __init__(self, word):
+            self.word = word
+            
+        def reverse_words(self):
+            s = self.word
+            return s[::-1]
+
+    # create object of the class
+    word = Word(string)
+
+    # call function
+    reversed_word = word.reverse_words()
+
+    return reversed_word
 
 """
-def get_fare_vehicle(list1: List):    
-
-  # create class
-  class Vehicle:
-      def __init__(self, name, mileage, capacity):
-          self.name = name
-          self.mileage = mileage
-          self.capacity = capacity
-
-      # create fare method
-      def fare(self):
-          return self.capacity * 100
-
-  # create object
-  vehicle1 = Vehicle(list1[0], list1[1], list1[2])
-
-  # return the fare of the vehicle
-  return vehicle1.fare()
-
-"""
-This is based on Class Inheritence.
-
-Input will be a list.
+Input is a number.
 
 You will be doing the following -
+1. Create a `IntToRoman` class with attribute num. 
+2. Create a method `int_to_Roman` inside the class that will return the roman form of the num.
+3. Create the object of the `IntToRoman` class with the input.
+4. Call the function `int_to_Roman` on the object.
+5. return the roman string
 
-1. Create class Vehicle with the attributes name, max_speed and mileage.
-2. Create class Bus that will inherit class vehicle.
-3. Create object of class Bus with the input list and return the name attribute of the Bus object.
+If the given number is less than 1, return -1.
+
+Example: if the input is - 'hello', then output should be 'olleh'.
+"""
+def intToRoman(n):
+
+    if n < 1:
+        return -1
+
+    class IntToRoman:
+        
+        def __init__(self, num):
+            self.num = num
+            
+        def int_to_Roman(self):
+            val = [
+                1000, 900, 500, 400,
+                100, 90, 50, 40,
+                10, 9, 5, 4,
+                1
+                ]
+            syb = [
+                "M", "CM", "D", "CD",
+                "C", "XC", "L", "XL",
+                "X", "IX", "V", "IV",
+                "I"
+                ]
+            roman_num = ''
+            i = 0
+            n = self.num
+            while  n > 0:
+                for _ in range(n // val[i]):
+                    roman_num += syb[i]
+                    n -= val[i]
+                i += 1
+            return roman_num
+
+    # create object of class
+    obj1 = IntToRoman(n)
+    return obj1.int_to_Roman()
 
 """
-def create_bus_inherit_class(list1: List):    
-
-  # create class vehicle
-  class Vehicle:
-      def __init__(self, name, max_speed, mileage):
-          self.name = name
-          self.max_speed = max_speed
-          self.mileage = mileage
-
-  # create class Bus that inherit class Vechicle
-  class Bus(Vehicle):
-      pass
-
-  # create object of class Bus
-  School_bus = Bus(list1[0], list1[1], list1[2])
-
-  # return the attribute name
-  return School_bus.name
-
-"""
-This is based on Class Inheritence.
-
-Input will be a list.
+Input is a string.
 
 You will be doing the following -
+1. Create a `Paranthesis` class with attribute str1. 
+2. Create a method `is_valid_parenthese` inside the class that will the validity. If its valid, returns 'Valid' else returns 'Invalid'.
+3. Create the object of the `Paranthesis` class with the input string.
+4. Call the function `is_valid_parenthese` on the object.
+5. return the output of the function
 
-1. Create class Vehicle with the attributes name, mileage and capacity.
-2. Create method `fare` in class Vehicle that calulates the fare as 'capacity*100'
-3. Create class Bus that will inherit class Vehicle.
-4. Create method `fare` in class Vehicle that will inherit the super class method and add the 10% maintainence charges. So total 
-fare for bus instance will become the final amount = total fare + 10% of the total fare.
-3. Create object of class Bus with the input list.
-4. Return the fare for the given capacity.
+If the given string is empty, return -1.
 
+Example: if the input is - '(){}[]', then output should be 'Valid'.
 """
-def get_bus_fare(list1: List):    
+def check_paranthesis_validity(string):
 
-  # create class Vehicle
-  class Vehicle:
-      def __init__(self, name, mileage, capacity):
-          self.name = name
-          self.mileage = mileage
-          self.capacity = capacity
+    if len(string) == 0:
+        return -1
 
-      def fare(self):
-          return self.capacity * 100
+    class Paranthesis:
+        def __init__(self, str1):
+            self.str1 = string
+            
+        def is_valid_parenthese(self):
+                stack, pchar = [], {"(": ")", "{": "}", "[": "]"}
+                for parenthese in self.str1:
+                    if parenthese in pchar:
+                        stack.append(parenthese)
+                    elif len(stack) == 0 or pchar[stack.pop()] != parenthese:
+                        return 'Invalid'
+                if len(stack) == 0:
+                    return 'Valid'
 
-  # creae class Bus
-  class Bus(Vehicle):
-      def fare(self):
-        amount = super().fare()
-        amount += amount * 10 / 100
-        return amount
-
-  # crete object of class Bus
-  School_bus = Bus(list1[0], list1[1], list1[2])
-
-  # return fare of the object
-  return School_bus.fare()
+    # create object
+    obj1 = Paranthesis(string)
+    return obj1.is_valid_parenthese()
 
 import unittest
 
@@ -165,16 +186,22 @@ class TestDataTypesAndVariables(unittest.TestCase):
         self.assertEqual(create_vehicle_class([240, 18]), 18, msg="It should return the mileage attribute i.e 18 for the given object.") 
         self.assertEqual(create_vehicle_class([230, 98]), 98, msg="It should return the mileage attribute i.e 98 for the given object.") 
 
-        # get_fare_vehicle function
-        self.assertEqual(get_fare_vehicle(["SUV", 12, 6]), 600, msg="It should return the fare of the Vehicle i.e 600 for the given object.") 
-        self.assertEqual(get_fare_vehicle(["DOD", 10, 35]), 3500, msg="It should return the fare of the Vehicle i.e 3500 for the given object.") 
+        # create_class_word function
+        self.assertEqual(create_class_word("hello"), 'olleh', msg="It should return the 'olleh' for the given string 'hello'.") 
+        self.assertEqual(create_class_word("okay"), 'yako', msg="It should return the 'yako' for the given string 'okay'.")
+        self.assertEqual(create_class_word(""), -1, msg="It should return -1 as the given string is empty.")
 
-        # create_bus_inherit_class function
-        self.assertEqual(create_bus_inherit_class(["School Volvo", 180, 12]), "School Volvo", msg="It should return the name attribute i.e 'School Volvo' for the given object.") 
-        self.assertEqual(create_bus_inherit_class(["Wagon R", 200, 60]), "Wagon R", msg="It should return the name attribute i.e 'Wagon R' for the given object.") 
- 
-        # get_bus_fare function
-        self.assertEqual(get_bus_fare(["School Volvo", 12, 50]), 5500.0, msg="It should return the fare of the Bus i.e 5500.0 for the given object.") 
-        self.assertEqual(get_bus_fare(["Wagon R", 10, 55]), 6050.0, msg="It should return the fare of the Bus i.e 6050.0 for the given object.") 
+        # intToRoman function
+        self.assertEqual(intToRoman(1), 'I', msg="It should return the 'I' for the given number 1.") 
+        self.assertEqual(intToRoman(4087), 'MMMMLXXXVII', msg="It should return the 'MMMMLXXXVII' for the given number 4087.")
+        self.assertEqual(intToRoman(0), -1, msg="It should return -1 as the given number is 0 i.e less than 1.") 
+        self.assertEqual(intToRoman(-3), -1, msg="It should return -1 as the given number is -3 i.e less than 1.") 
+
+        # check_paranthesis_validity function
+        self.assertEqual(check_paranthesis_validity("(){}[]"), 'Valid', msg="It should return the 'Valid' for the given paranthesis string '(){}[]'.")
+        self.assertEqual(check_paranthesis_validity("()[{)}"), 'Invalid', msg="It should return the 'Invalid' for the given paranthesis string '()[{)}'.") 
+        self.assertEqual(check_paranthesis_validity("()"), 'Valid', msg="It should return the 'Valid' for the given paranthesis string '()'.")
+        self.assertEqual(check_paranthesis_validity(""), -1, msg="It should return -1 as the given paranthesis string is empty.")
+
 
 unittest.main()
