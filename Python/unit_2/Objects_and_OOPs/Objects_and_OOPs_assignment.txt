@@ -16,35 +16,32 @@ The function will do the following -
 2. Create the object of the `Vehicle` class with the input 
 3. Return the attribute mileage of the object.
 
-3. get_fare_vehicle
+3. create_class_word
 
-The function will do the following -
-1. Create class vehicle with the attributes name, mileage and capacity.
-2. Create method `fare` in class vehicle that calulates the fare as 'capacity*100'
-3. Create object of class Vehicle with the input list.
-4. Return the fare for the given capacity.
+The function will be doing the following -
+1. Create a `Word` class with attribute word. 
+2. Create a method `reverse_words` inside the class that will return the reversed word.
+3. Create the object of the `Word` class with the input string.
+4. Call the function `reverse_words` on the object.
+5. return the reversed string
 
-4. create_bus_inherit_class
+4. intToRoman
 
-This is based on Class Inheritence.
+The function be doing the following -
+1. Create a `IntToRoman` class with attribute num. 
+2. Create a method `int_to_Roman` inside the class that will return the roman form of the num.
+3. Create the object of the `IntToRoman` class with the input.
+4. Call the function `int_to_Roman` on the object.
+5. return the roman string
 
-The function will do the following -
-1. Create class Vehicle with the attributes name, max_speed and mileage.
-2. Create class Bus that will inherit class vehicle.
-3. Create object of class Bus with the input list and return the name attribute of the Bus object.
+5. check_paranthesis_validity
 
-5. get_bus_fare
-
-This is based on Class Inheritence.
-
-The function will do the following -
-1. Create class Vehicle with the attributes name, mileage and capacity.
-2. Create method `fare` in class Vehicle that calulates the fare as 'capacity*100'
-3. Create class Bus that will inherit class Vehicle.
-4. Create method `fare` in class Vehicle that will inherit the super class method and add the 10% maintainence charges. So total 
-fare for bus instance will become the final amount = total fare + 10% of the total fare.
-5. Create object of class Bus with the input list.
-6. Return the fare for the given capacity.
+The function will be doing the following -
+1. Create a `Paranthesis` class with attribute str1. 
+2. Create a method `is_valid_parenthese` inside the class that will the validity. If its valid, returns 'Valid' else returns 'Invalid'.
+3. Create the object of the `Paranthesis` class with the input string.
+4. Call the function `is_valid_parenthese` on the object.
+5. return the output of the function
 
 Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
 ask for help or review prior lessons.
