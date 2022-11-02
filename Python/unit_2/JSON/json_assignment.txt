@@ -1,0 +1,58 @@
+Please implement the functions for json.py.
+
+Below are the functions that you will be implementing in the python file.
+
+1. json_to_object
+
+Write a function to convert JSON data to Python object. and return the values.
+
+For example: for the JSON - '{ "Name":"David", "Class":"I", "Age":6 }', it should return ['David', 'I', 6] 
+
+2. dict_to_json
+
+Write a function to convert Python dictionary object (sort by key) to JSON data. 
+Return the object with indent level 4.
+
+For example: for the input data - {'4': 5, '6': 7, '1': 3, '2': 4}, the ouput should be -
+{
+    "1": 3,
+    "2": 4,
+    "4": 5,
+    "6": 7
+}
+
+3. check_json_validity
+
+Write a function to check whether following json is valid or invalid.
+If valid returns 'Valid', else 'InValid'
+
+For example: for the JSON - '{ "Name":"David", "Class":"I", "Age":6 }', it should return 'Valid'
+             for the JSON - '{{}', it should return 'InValid'
+			 
+4. get_all_key_data
+
+Write a function that parse the following JSON to get all the values of a given key within an array.
+
+For example: for the input json data - [ 
+   { 
+      "id":1,
+      "name":"name1",
+      "color":[ 
+         "red",
+         "green"
+      ]
+   },
+   { 
+      "id":2,
+      "name":"name2",
+      "color":[ 
+         "pink",
+         "yellow"
+      ]
+   }
+]
+
+The  output for the key `name' are - ['name1', 'name2']
+
+Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
+ask for help or review prior lessons.
