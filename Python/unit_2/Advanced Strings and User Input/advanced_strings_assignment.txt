@@ -1,0 +1,34 @@
+Please implement the functions for advanced_strings.py.
+
+Below are the functions that you will be implementing in the python file.
+
+1. char_frequency
+
+You are given a string. Write a function to count the number of characters (character frequency) in a string.
+
+2. string_both_ends
+
+You are given a string. Write a function to get a string made of the first 2 and the last 2 chars from a given a string. If the string length is less than 2, return empty string.
+
+3. check_input
+
+You are given a string. Write a function to call a input method and get the input from the user. If the input is same as the input of the function return 'Matched' else return 'Not Matched'.
+
+4. chars_mix_up
+
+You are given two string. Write a function to get a single string from two given strings, separated by a space and swap the first two characters of each string.
+
+5. lexicographi_sort
+
+You are given a string. Write a function to sort a string lexicographically.
+
+6. get_unique_words_sorted
+
+You are given a list of words. Write a function to get the unique words in sorted form.
+
+7. reverse_string_words
+
+You are given a string of words. Write a function to reverse words in a string.
+
+Keep in mind, these functions require prior knowledge of prior lessons, if you don't know how to implement these functions
+ask for help or review prior lessons.
