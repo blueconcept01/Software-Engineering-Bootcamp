@@ -59,7 +59,7 @@ class TestDataTypesAndVariables(unittest.TestCase):
         self.assertTrue(is_positive(2), msg="is_positive i not returning true when given a positive number")
         self.assertFalse(is_positive(-2), msg="is_positive is not returning false when given a negative number")
 
-        self.assertEqual(triple(3), msg="your triple function is not returning 3 times the input value for n")
+        self.assertEqual(triple(3), 9, msg="your triple function is not returning 3 times the input value for n")
 
         lst = [1,2,3]
         add_first_item(lst)
